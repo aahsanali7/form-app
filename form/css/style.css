@@ -1,0 +1,122 @@
+/* Modern Color Palette */
+:root {
+    --primary-color: #4361ee;    /* Vibrant blue */
+    --secondary-color: #231b36;  /* Deep purple */
+    --accent-color: #4cc9f0;     /* Light blue */
+    --background-color: #f8f9fa; /* Light gray */
+    --text-color: #212529;       /* Dark gray */
+    --light-gray: #e9ecef;
+    --white: #ffffff;
+    --success-color: #4bb543;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  /* Form Container */
+  #survey-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headings */
+  #title {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  #description {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Form Elements */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  }
+  
+  /* Radio and Checkbox Styles */
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  /* Button Styles */
+  button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    body {
+      padding: 1rem;
+    }
+    
+    #survey-form {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Form Validation Styling */
+  input:required:invalid {
+    border-left: 3px solid #ff6b6b;
+  }
+  
+  input:required:valid {
+    border-left: 3px solid var(--success-color);
+  }
